@@ -167,4 +167,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("C", result);
     }
+
+    @Test
+    void should_return_XCIX_when_number_is_99() {
+        // Given
+        int number = 99;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("XCIX", result);
+    }
 }
