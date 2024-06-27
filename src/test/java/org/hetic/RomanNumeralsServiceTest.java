@@ -191,4 +191,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("D", result);
     }
+
+    @Test
+    void should_return_M_when_number_is_1000() {
+        // Given
+        int number = 1000;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("M", result);
+    }
 }
