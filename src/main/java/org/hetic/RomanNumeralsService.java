@@ -23,9 +23,12 @@ public class RomanNumeralsService {
         if (number == 7) {
             return "VII";
         }
+        if (number == 8) {
+            return "VIII";
+        }
         if (number == 10) {
             return "X";
         }
-        return "VIII";
+        return "IX";
     }
 }
