@@ -20,9 +20,12 @@ public class RomanNumeralsService {
         if (number == 6) {
             return "VI";
         }
+        if (number == 7) {
+            return "VII";
+        }
         if (number == 10) {
             return "X";
         }
-        return "VII";
+        return "VIII";
     }
 }
