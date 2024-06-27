@@ -27,8 +27,12 @@ public class NumberValueObject {
     }
 
     public String toRoman() {
-        if (this.number <= 0) {
+        if (this.number == 0) {
             throw new IllegalArgumentException("Conversion failed: Romans never discovered the number 0");
+        }
+
+        if (this.number < 0) {
+            throw new IllegalArgumentException("Conversion failed: Negative numbers do not exist in Roman numerals");
         }
 
         int number = this.number;
