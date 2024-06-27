@@ -179,4 +179,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("XCIX", result);
     }
+
+    @Test
+    void should_return_D_when_number_is_500() {
+        // Given
+        int number = 500;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("D", result);
+    }
 }
