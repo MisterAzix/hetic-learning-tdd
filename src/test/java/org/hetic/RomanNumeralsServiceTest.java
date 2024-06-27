@@ -71,4 +71,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("III", result);
     }
+
+    @Test
+    void should_return_IV_when_number_is_4() {
+        // Given
+        int number = 4;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("IV", result);
+    }
 }
