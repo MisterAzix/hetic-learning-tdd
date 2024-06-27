@@ -119,4 +119,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("VIII", result);
     }
+
+    @Test
+    void should_return_IX_when_number_is_9() {
+        // Given
+        int number = 9;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("IX", result);
+    }
 }
