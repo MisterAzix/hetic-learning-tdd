@@ -59,4 +59,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("II", result);
     }
+
+    @Test
+    void should_return_III_when_number_is_3() {
+        // Given
+        int number = 3;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("III", result);
+    }
 }
