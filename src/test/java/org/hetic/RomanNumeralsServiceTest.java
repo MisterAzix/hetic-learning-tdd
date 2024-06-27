@@ -131,4 +131,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("IX", result);
     }
+
+    @Test
+    void should_return_XI_when_number_is_11() {
+        // Given
+        int number = 11;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("XI", result);
+    }
 }
