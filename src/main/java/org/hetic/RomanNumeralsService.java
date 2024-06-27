@@ -8,6 +8,7 @@ public class RomanNumeralsService {
 
     static {
         romanNumerals.put(1000, "M");
+        romanNumerals.put(900, "CM");
         romanNumerals.put(500, "D");
         romanNumerals.put(100, "C");
         romanNumerals.put(90, "XC");
