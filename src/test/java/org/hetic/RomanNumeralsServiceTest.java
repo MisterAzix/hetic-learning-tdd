@@ -155,4 +155,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("L", result);
     }
+
+    @Test
+    void should_return_C_when_number_is_100() {
+        // Given
+        int number = 100;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("C", result);
+    }
 }
