@@ -27,6 +27,10 @@ public class NumberValueObject {
     }
 
     public String toRoman() {
+        if (this.number <= 0) {
+            throw new IllegalArgumentException("Conversion failed: Romans never discovered the number 0");
+        }
+
         int number = this.number;
         StringBuilder result = new StringBuilder();
         for (Map.Entry<Integer, String> entry : romanNumerals.entrySet()) {
