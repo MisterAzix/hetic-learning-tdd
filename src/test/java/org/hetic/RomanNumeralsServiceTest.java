@@ -215,4 +215,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("MCMXCIV", result);
     }
+
+    @Test
+    void should_return_CDXC_when_number_is_490() {
+        // Given
+        int number = 490;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("CDXC", result);
+    }
 }
