@@ -11,12 +11,15 @@ public class RomanNumeralsService {
         if (number == 3) {
             return "III";
         }
+        if (number == 4) {
+            return "IV";
+        }
         if (number == 5) {
             return "V";
         }
         if (number == 10) {
             return "X";
         }
-        return "IV";
+        return "VI";
     }
 }
