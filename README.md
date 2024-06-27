@@ -2,7 +2,7 @@
 
 Kata from [Coding Dojo](https://codingdojo.org/kata/RomanNumerals/) to practice TDD.
 
-Currently, the algorithm can handle all numbers greater than 0.
+Algorithm can handle all numbers. It throws an exception if the number is negative or 0.
 
 ## 👤️ Authors 👤
 
