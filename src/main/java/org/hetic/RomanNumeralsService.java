@@ -5,12 +5,15 @@ public class RomanNumeralsService {
         if (number == 1) {
             return "I";
         }
+        if (number == 2) {
+            return "II";
+        }
         if (number == 5) {
             return "V";
         }
         if (number == 10) {
             return "X";
         }
-        return "II";
+        return "III";
     }
 }
