@@ -1,37 +1,27 @@
 package org.hetic;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class RomanNumeralsService {
+    private static final Map<Integer, String> romanNumerals = new LinkedHashMap<>();
+
+    static {
+        romanNumerals.put(10, "X");
+        romanNumerals.put(9, "IX");
+        romanNumerals.put(5, "V");
+        romanNumerals.put(4, "IV");
+        romanNumerals.put(1, "I");
+    }
+
     public String processNumber(int number) {
-        if (number == 1) {
-            return "I";
+        StringBuilder result = new StringBuilder();
+        for (Map.Entry<Integer, String> entry : romanNumerals.entrySet()) {
+            while (number >= entry.getKey()) {
+                result.append(entry.getValue());
+                number -= entry.getKey();
+            }
         }
-        if (number == 2) {
-            return "II";
-        }
-        if (number == 3) {
-            return "III";
-        }
-        if (number == 4) {
-            return "IV";
-        }
-        if (number == 5) {
-            return "V";
-        }
-        if (number == 6) {
-            return "VI";
-        }
-        if (number == 7) {
-            return "VII";
-        }
-        if (number == 8) {
-            return "VIII";
-        }
-        if (number == 9) {
-            return "IX";
-        }
-        if (number == 10) {
-            return "X";
-        }
-        return "XI";
+        return result.toString();
     }
 }
