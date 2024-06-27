@@ -95,4 +95,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("VI", result);
     }
+
+    @Test
+    void should_return_VII_when_number_is_7() {
+        // Given
+        int number = 7;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("VII", result);
+    }
 }
