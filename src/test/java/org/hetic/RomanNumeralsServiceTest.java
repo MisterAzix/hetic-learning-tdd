@@ -35,4 +35,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("V", result);
     }
+
+    @Test
+    void should_return_X_when_number_is_10() {
+        // Given
+        int number = 10;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("X", result);
+    }
 }
