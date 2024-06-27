@@ -251,4 +251,17 @@ class NumberValueObjectTest {
         // Then
         assertEquals("Conversion failed: Romans never discovered the number 0", exception.getMessage());
     }
+
+    @Test
+    void should_throw_exception_when_number_is_negative() {
+        // Given
+        int number = -1;
+        NumberValueObject numberValueObject = new NumberValueObject(number);
+
+        // When
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, numberValueObject::toRoman);
+
+        // Then
+        assertEquals("Conversion failed: Negative numbers do not exist in Roman numerals", exception.getMessage());
+    }
 }
