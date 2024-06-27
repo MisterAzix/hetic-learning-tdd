@@ -203,4 +203,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("M", result);
     }
+
+    @Test
+    void should_return_MCMXCIV_when_number_is_1994() {
+        // Given
+        int number = 1994;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("MCMXCIV", result);
+    }
 }
