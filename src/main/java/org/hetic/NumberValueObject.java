@@ -3,9 +3,14 @@ package org.hetic;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class RomanNumeralsService {
+public class NumberValueObject {
     private static final Map<Integer, String> romanNumerals = new LinkedHashMap<>();
+    private final int number;
 
+    NumberValueObject(int number) {
+        this.number = number;
+    }
+    
     static {
         romanNumerals.put(1000, "M");
         romanNumerals.put(900, "CM");
@@ -21,7 +26,8 @@ public class RomanNumeralsService {
         romanNumerals.put(1, "I");
     }
 
-    public String processNumber(int number) {
+    public String toRoman() {
+        int number = this.number;
         StringBuilder result = new StringBuilder();
         for (Map.Entry<Integer, String> entry : romanNumerals.entrySet()) {
             while (number >= entry.getKey()) {
