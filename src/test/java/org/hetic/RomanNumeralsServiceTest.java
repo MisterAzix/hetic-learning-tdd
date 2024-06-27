@@ -47,4 +47,16 @@ class RomanNumeralsServiceTest {
         // Then
         assertEquals("X", result);
     }
+
+    @Test
+    void should_return_II_when_number_is_2() {
+        // Given
+        int number = 2;
+
+        // When
+        String result = romanNumeralsService.processNumber(number);
+
+        // Then
+        assertEquals("II", result);
+    }
 }
