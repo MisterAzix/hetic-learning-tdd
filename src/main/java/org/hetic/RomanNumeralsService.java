@@ -7,6 +7,7 @@ public class RomanNumeralsService {
     private static final Map<Integer, String> romanNumerals = new LinkedHashMap<>();
 
     static {
+        romanNumerals.put(500, "D");
         romanNumerals.put(100, "C");
         romanNumerals.put(90, "XC");
         romanNumerals.put(50, "L");
